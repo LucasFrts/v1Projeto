@@ -47,7 +47,12 @@ html{
   background-color: #541f32;
   color: #e1e1e1;
 }
-.terminal-button, .terminal-button, .terminal-button, .terminal-button:first-child:active{
+.terminal-button:first-child:active{
+  color: #fff;
+  background-color: #5b2438;
+  border-color: #2a0915;
+}
+.terminal-button, .terminal-button, .terminal-button{
   color: #fff;
   border-color: #2a0915;
 }
