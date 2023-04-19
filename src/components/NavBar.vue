@@ -28,7 +28,8 @@
 </template>
 <style scoped>
 .navbar{
-    width: 100vw;
+  min-width: 100%;  
+  width: 100vw;
 }
 ul{
     justify-content: center !important;

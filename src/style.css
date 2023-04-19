@@ -14,18 +14,32 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-}
-
 html{
   margin: 0;
+  height: 100%;
 }
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+@media (max-width:600px){
+  body {
+    background-image: url('./assets/mobile.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+
 .Rubrik{
   font-family: 'Rubik', sans-serif;
 }

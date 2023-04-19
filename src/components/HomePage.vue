@@ -8,17 +8,23 @@ const title = ref("lucas@lucas-project: ~/projects/portifolio")
 </script>
 
 <template>
-  <div class="p-3">
-    <div class="col-md-12 d-flex flex-column">
-      <div class="pfp-circle d-flex flex-column">
-        <img :src="image2" class="rounded float-start" alt="userimg">
-        <TerminalComponent :title="title" class="adjust-width">
-          <h1>Lucas Freitas</h1>
-          <h2>Fullstack Developer</h2>
-        </TerminalComponent>
+  
+    <div class="row">
+      <div class="col-6 d-flex flex-column p-3">
+          <div class="pfp-circle d-flex flex-column">
+            <img :src="image2" class="rounded float-start" alt="userimg">
+            <TerminalComponent :title="title" class="adjust-width">
+              <h1>Lucas Freitas</h1>
+              <h2>Fullstack Developer</h2>
+            </TerminalComponent>
+          </div>
+      </div>
+      <div class="col-6">
+        <div class="tool-bar">
+          <FontAwesomeIcon/>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
@@ -40,9 +46,11 @@ const title = ref("lucas@lucas-project: ~/projects/portifolio")
   margin-top: -2rem;
 }
 
-/* .desc-area{
- display: flex;
- flex-direction: flex-start;
- align-content: flex-start;
-} */
+.tool-bar{
+  width: 5rem;
+  background-color: brown;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+}
 </style>
