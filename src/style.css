@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Montserrat&family=Rubik&family=Ubuntu&family=Ubuntu+Mono&display=swap');
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,8 +26,30 @@ body {
 html{
   margin: 0;
 }
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Baloo 2', cursive;
+.Rubrik{
+  font-family: 'Rubik', sans-serif;
+}
+.bg-top-terminal{
+  background-color: #2D2D2D;
+}
+.bg-terminal{
+  background-color: #481025;
+}
+.terminal-button{
+  font-family: 'Ubuntu', sans-serif;
+  color: #ffffff;
+}
+.terminal-button:hover, .terminal-button:active{
+  background-color: #541f32;
+  color: #e1e1e1;
+}
+.terminal-button:checked{
+  background-color: #541f32;
+  color: #e1e1e1;
+}
+.terminal-button, .terminal-button, .terminal-button, .terminal-button:first-child:active{
+  color: #fff;
+  border-color: #2a0915;
 }
 
 @media (prefers-color-scheme: light) {
