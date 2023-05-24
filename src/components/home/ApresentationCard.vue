@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import TerminalComponent from './TerminalComponent.vue';
-import image2 from "./../assets/img-2.png"
+import TerminalComponent from '../project/TerminalComponent.vue';
+import image2 from "../../assets/img-2.png"
 // defineProps<{ msg: string }>()
 
 const title = ref("lucas@lucas-project: ~/projects/portifolio")
@@ -11,10 +11,10 @@ const title = ref("lucas@lucas-project: ~/projects/portifolio")
         <picture class="pfp-circle d-flex justify-content-center">
             <img :src="image2" class="rounded float-start" alt="userimg">
         </picture>
-            <TerminalComponent :title="title" class="adjust-width">
-              <h1>Lucas Freitas</h1>
-              <h2>Fullstack Developer</h2>
-            </TerminalComponent>
+        <TerminalComponent :title="title" class="adjust-width">
+          <h1>Lucas Freitas</h1>
+          <h2>Fullstack Developer</h2>
+        </TerminalComponent>
     </div>
 </template>
 <style scoped>
