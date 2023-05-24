@@ -1,28 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import image2 from "./../assets/img-2.png"
-import TerminalComponent from './TerminalComponent.vue';
-// defineProps<{ msg: string }>()
-
-const title = ref("lucas@lucas-project: ~/projects/portifolio")
+import ApresentationCard from './ApresentationCard.vue';
+import ToolBar from "./ToolBar.vue"
 </script>
 
 <template>
   
     <div class="row">
-      <div class="col-6 d-flex flex-column p-3">
-          <div class="pfp-circle d-flex flex-column">
-            <img :src="image2" class="rounded float-start" alt="userimg">
-            <TerminalComponent :title="title" class="adjust-width">
-              <h1>Lucas Freitas</h1>
-              <h2>Fullstack Developer</h2>
-            </TerminalComponent>
-          </div>
+      <div class="col-md-6 d-flex flex-column p-3">
+          <ApresentationCard/>
       </div>
-      <div class="col-6">
-        <div class="tool-bar">
-          <FontAwesomeIcon/>
-        </div>
+      <div class="col-md-6">
+        <ToolBar/>
       </div>
     </div>
 </template>
@@ -30,27 +18,5 @@ const title = ref("lucas@lucas-project: ~/projects/portifolio")
 <style scoped>
 .rounded{
   height: 25rem;
-}
-.pfp-circle{
-  display: flex;
-  background-color: #481024ee;
-  width: 30rem;
-  height: 30rem;
-  justify-content: center;
-  border-radius: 50%;
-  align-items: center;
-  border: .5rem solid #2D2D2D;;
-}
-.adjust-width{
-  width: 30rem;
-  margin-top: -2rem;
-}
-
-.tool-bar{
-  width: 5rem;
-  background-color: brown;
-  height: 100vh;
-  position: fixed;
-  right: 0;
 }
 </style>
