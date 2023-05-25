@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import TerminalComponent from '../project/TerminalComponent.vue';
 import image2 from "../../assets/img-2.png"
-// defineProps<{ msg: string }>()
 
 const title = ref("lucas@lucas-project: ~/projects/portifolio")
 </script>

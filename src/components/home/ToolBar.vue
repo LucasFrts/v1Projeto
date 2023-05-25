@@ -1,8 +1,17 @@
+<script setup lang="ts">
+import { defineProps } from 'vue';
+import { Modal } from '../views/HomePage.vue';
+type Props ={
+    tools:Array<Modal>
+}  
+defineProps<Props>()
+
+</script>
 <template>
      <div class="tool-bar">
-        <fa icon="bars"></fa>
-        <fa :icon="['fab', 'firefox']"></fa>
-        <fa icon="envelope"></fa>
+        <button v-for="(tool, index) in tools" :key="index" data-bs-toggle="modal" :data-bs-target="`#${tool.id}`" class="btn btn-link">
+            <fa :icon="tool.icon"></fa>
+        </button>
     </div>
 </template>
 <style scoped>
@@ -33,8 +42,8 @@
     padding-right: 1rem;
 }
 }
-.tool-bar:nth-child(n){
-    color:#fafafa;
+.btn{
+    color:#fafafa !important;
     font-size: 2rem;
 }
 </style>

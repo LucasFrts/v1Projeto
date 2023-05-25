@@ -2,7 +2,7 @@
 
 </script>
 <template>
-<nav class="navbar navbar-expand-lg bg-top-terminal p-2 bg-opacity-25">
+<nav id="navbar" class="navbar navbar-expand-lg bg-top-terminal p-2 bg-opacity-25">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,7 @@
 .navbar{
   min-width: 100%;  
   width: 100vw;
+  height: 10%;
 }
 ul{
     justify-content: center !important;
