@@ -1,5 +1,6 @@
 <script lang="ts">
 import { IconType } from '../../views/HomePage.vue';
+import { ref } from 'vue';
 import SkillCard from './SkillCard.vue';
 export interface Skill {
     icon:IconType,
@@ -64,13 +65,25 @@ export default{
         name:'GIT',
         color:'#cb2f00'
     },
+   
 
-
-]
+]   
     return {skills}
+    },
+    data(){
+        return{
+            search:""
+        }
     },
     components:{
         SkillCard
+    },
+    computed:{
+        searchedSkills(){
+            return this.skills.filter((option) =>
+              option.name.toLowerCase().includes(this.search.toLowerCase())
+            );
+        }
     }
 }
 
@@ -79,10 +92,10 @@ export default{
     <div class="col-md-12 d-flex justify-content-center align-items-center flex-column">
         <div class="input-group flex-nowrap mt-2">
             <span class="input-group-text" id="addon-wrapping"><fa :icon="['fas', 'search']"/></span>
-            <input type="text" class="form-control text-white" placeholder="Type to search" aria-label="search" aria-describedby="addon-wrapping">
+            <input type="text" v-model="search" class="form-control text-white" placeholder="Type to search" aria-label="search" aria-describedby="addon-wrapping">
         </div>
         <div class="w-75 flex-wrap d-flex text-white gap-5 mt-5 justify-content-center">
-            <SkillCard :skills="skills" />
+            <SkillCard :skills="searchedSkills" />
         </div>
     </div>
 </template>

@@ -17,7 +17,7 @@ import { defineProps } from 'vue';
         <div :style="{maxHeight:`calc(100% - ${navbarHeight}px)`}" class="modal-dialog modal-fullscreen">
             <div class="modal-content bg-dark">
                 <div v-show="header" class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close f-12px text-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <slot>
@@ -29,6 +29,17 @@ import { defineProps } from 'vue';
     </div>
 </template>
 <style scoped>
+.f-12px{
+    font-size: 12px;
+}
+.btn-close{
+    border-radius: 50%;
+    background-color: #fafafa39;
+    transition: background-color .5s ease;
+}
+.btn-close:hover{
+    background-color: #fafafa6c;
+}
 .modal-dialog{
     position: absolute;
     bottom: 0;

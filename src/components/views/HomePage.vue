@@ -4,6 +4,7 @@ import ApresentationCard from '../home/ApresentationCard.vue';
 import ToolBar from "../home/ToolBar.vue"
 import ModalSlot from '../util/ModalSlot.vue';
 import MenuApresentation from '../home/tools/MenuApresentation.vue';
+import NavigatorBrowser from '../home/tools/NavigatorBrowser.vue';
 // receber posteriormente via API
 type IconPrefix = "fab" | "fas"
 export type IconType = [IconPrefix, string]
@@ -41,7 +42,8 @@ export default {
     ApresentationCard,
     ToolBar,
     ModalSlot,
-    MenuApresentation
+    MenuApresentation,
+    NavigatorBrowser
   }
 
 }
